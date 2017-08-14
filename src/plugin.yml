@@ -1,0 +1,5 @@
+name: RankPoints
+version: TESTING
+main: me.alex.RankPoints.RankPoints
+author: Alex(Amanthemoneyman)
+depend: [Vault]

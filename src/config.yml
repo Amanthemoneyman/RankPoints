@@ -1,0 +1,40 @@
+Ranks:
+  BaseRank: "Member" #The rank that all players start with
+  '1': "Warrior"
+    UpgradePrice: 3000
+    RankVoucherCmd: ''
+  '2': "King"
+    UpgradePrice: 6000
+    RankVoucherCmd: ''
+  '3': "Mystic"
+    UpgradePrice: 8000
+    RankVoucherCmd: ''
+  '4': "Ghoul"
+    UpgradePrice: 10000
+    RankVoucherCmd: ''
+  '5': "Overlord"
+    UpgradePrice: 15000
+    RankVoucherCmd: ''
+  '6': "Ghost"
+    UpgradePrice: 20000
+    RankVoucherCmd: ''
+  '7': "Cursed"
+    UpgradePrice: 30000 #The amount of rank points to upgrade
+    RankVoucherCmd: '' #The cmd used to give the rank voucher(For Custom)
+RankPoints:
+  PayOutMoney: false #If true instead of giving rank points the killer will be paid (Using vault)
+  PointsPerTier: 1  #Every tier lower the killed is the killer will get this amount of rank points
+  MoneyPerTier: 100 #The amount of money that you get for killing (Adds up each tier higher the rank is)
+  TakeMoney: false #Take money from the killed players balance
+  TimeBetweenKills: 30 #The amount of time in between kills (Stops Farming)
+  RankVouchers:
+    Enabled: true #Allows players to choose to get a rank voucher instead of a rank
+    UseCustomCmds: true #If false vouchers will be given by the plugin and when right clicked will redeem
+
+
+
+
+
+
+
+
