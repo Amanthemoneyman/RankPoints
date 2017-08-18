@@ -2,5 +2,5 @@ Messages:
   NoPermission: '{Prefix} &4No permission!'
   BadSyntax: '{Prefix} &cThose arguments are incorrect use &e/rankpoints help &cfor command outlines'
   Prefix: '&8[&c&lRankPoints&r&8]'
-
-
+  MustBePlayer: '{Prefix} &4Must be a player to execute that command!'
+  Help: '&c----------{Prefix}&c----------\nHello'

@@ -13,11 +13,14 @@ public enum Messages{
     // Declare all the messages
     NO_PERMISSION("permission"),
     BAD_SYNTAX("bad-syntax"),
-    PREFIX("prefix");
+    PREFIX("prefix"),
+    NOT_PLAYER("not-player"),
+    HELP("help")
+    ;
 
 
     private  String text;
-    // The values from the config
+
     Messages(String text) {
         this.text = text;
     }

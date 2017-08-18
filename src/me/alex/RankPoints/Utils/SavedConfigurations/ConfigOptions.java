@@ -3,10 +3,11 @@ package me.alex.RankPoints.Utils.SavedConfigurations;
 public enum ConfigOptions {
 
 
-    PAYOUTMONEY(Boolean.FALSE,"PayOutMoney")
-    ,TAKEMONEY(Boolean.FALSE,"TakeMoney")
-    ,RANKVOUCHERSENABLED(Boolean.TRUE,"RankVoucherEnabled"
-    ),RANKVOUCHERSUSECUSTOMCMDS(Boolean.FALSE,"RankVoucherCustomCmds");
+    PAY_OUT_MONEY(Boolean.FALSE,"PayOutMoney")
+    ,TAKE_MONEY(Boolean.FALSE,"TakeMoney")
+    ,RANK_VOUCHERS(Boolean.TRUE,"RankVouchersEnabled")
+    ,RANK_VOUCHERS_USE_CUSTOMCMDS(Boolean.FALSE,"RankVouchersUseCustomCmds")
+    ,ECONOMY(Boolean.TRUE,"EconomyEnabled");
 
 
     private boolean bool;

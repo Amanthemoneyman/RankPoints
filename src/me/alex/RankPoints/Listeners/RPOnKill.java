@@ -1,6 +1,7 @@
 package me.alex.RankPoints.Listeners;
 
 import me.alex.RankPoints.RankPoints;
+import me.alex.RankPoints.Utils.SavedConfigurations.ConfigOptions;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -25,6 +26,12 @@ public class RPOnKill implements Listener {
     {
         Player killer = e.getEntity().getKiller();
         Player dead = e.getEntity();
+        int rankDistance = plugin.getRankDistance(killer,dead);
+        if(ConfigOptions.PAY_OUT_MONEY.getValue())
+        {
+
+
+        }
 
 
 

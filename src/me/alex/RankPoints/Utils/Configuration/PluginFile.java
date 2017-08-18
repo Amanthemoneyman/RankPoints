@@ -21,7 +21,6 @@ public class PluginFile extends File{
     {
         super(plugin.getDataFolder(),pluginFile.getName());
         this.plugin = plugin;
-        this.fm = plugin.getFileManager();
         if (!this.exists()) {
             try {
                 if (!this.getName().endsWith(".yml")) {
@@ -42,8 +41,8 @@ public class PluginFile extends File{
         if (this.getName().endsWith(".yml"))
         {
             type = FileType.YML;
-            loadFileConfiguration();
-            this.saveFile();
+            this.loadFileConfiguration();
+
         }
 
     }
@@ -52,9 +51,7 @@ public class PluginFile extends File{
     {
         super(plugin.getDataFolder(),fileName);
         this.plugin = plugin;
-        this.fm = plugin.getFileManager();
         if (!this.exists()) {
-            try {
                 if (!this.getName().endsWith(".yml")) {
 
                     if(this.getName().endsWith(".txt"))
@@ -63,17 +60,14 @@ public class PluginFile extends File{
                     } else { type = FileType.OTHER; }
                     mkdir();
                 } else {
-                      createNewFile();
+                      plugin.saveResource(this.getName(), false);
                 }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
         }
 
         if (this.getName().endsWith(".yml"))
             type = FileType.YML;
         this.loadFileConfiguration();
-        this.saveFile();
+
 
     }
 
@@ -96,11 +90,15 @@ public class PluginFile extends File{
             try {
 
                 config = YamlConfiguration.loadConfiguration(this);
+                Utilities.debug(this.getName() + " has been loaded.");
 
             } catch (Exception ex) {
                 ex.printStackTrace();
 
             }
+        } else
+        {
+            Utilities.debug("File : " + getName() + " is not a yml file therfore the configuration was not loaded");
         }
 
 
@@ -109,13 +107,6 @@ public class PluginFile extends File{
 
     public FileType getType()
     { return this.type; }
-
-    private void addToManager()
-    {
-        this.plugin.getFileManager().addFile(this);
-
-
-    }
 
     public FileConfiguration getConfig() {
         return config;
