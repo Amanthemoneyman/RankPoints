@@ -32,7 +32,7 @@ return;
 
         if(plugin.getDataFolder().listFiles().length < 2)
         {
-            if()
+            
             for(File f : plugin.getDataFolder().listFiles())
             {
                 if(f.getName().equalsIgnoreCase("config.yml"))
